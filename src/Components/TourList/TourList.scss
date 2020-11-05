@@ -1,0 +1,34 @@
+// default layout
+.tourlist{
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+// layout base of constrains
+
+@media screen and (min-width: 768px){
+    .tourlist{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .tourlist{
+       // display: grid; alread execute from 768px
+       //grid-template-columns: 1fr 1fr 1fr; // make 3 cloumns
+       width: 85vw;
+        grid-template-columns: repeat(3,1fr);  // using repeat(num_col,size)
+       // grid-column-gap: 1.5rem; alread execute from 768px
+    }
+}
+
+@media screen and (min-width: 1140px){
+    .tourlist{
+       // display: grid;
+        grid-template-columns: repeat(4,1fr);
+        //grid-column-gap: 1.5rem;
+    }
+}
